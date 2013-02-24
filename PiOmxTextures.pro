@@ -29,6 +29,7 @@ INCLUDEPATH += \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtQuick \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5 \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtGui/5.0.1/QtGui \
+   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtCore/5.0.1 \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vcos/pthreads \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vmcs_host/linux \
    /usr/include/qt5 \
