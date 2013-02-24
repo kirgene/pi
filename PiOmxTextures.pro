@@ -6,7 +6,7 @@
 
 #QT += core core-private gui gui-private opengl quick quick-private
 
-QT = gui-private quick-private core-private 
+QT = 
 
 TARGET   = PiOmxTextures
 TEMPLATE = app
@@ -28,6 +28,7 @@ INCLUDEPATH += \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtGui \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtQuick \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5 \
+   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtGui/5.0.1/QtGui/private \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vcos/pthreads \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vmcs_host/linux \
    /usr/include/qt5 \
