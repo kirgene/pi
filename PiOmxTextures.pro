@@ -6,7 +6,7 @@
 
 #QT += core core-private gui gui-private opengl quick quick-private
 
-QT = 
+QT = gui-private quick-private core-private 
 
 TARGET   = PiOmxTextures
 TEMPLATE = app
