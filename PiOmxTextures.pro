@@ -23,6 +23,7 @@ LIBS += -lfreetype -lWFC -lpcre
 INCLUDEPATH += \
    /usr/include/qt5/QtWidgets \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtWidgets \
+   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtQuick \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5 \
    /usr/include/qt5 \
    omx_wrapper \
