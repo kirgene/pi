@@ -12,7 +12,7 @@ TARGET   = PiOmxTextures
 TEMPLATE = app
 
 # External
-LIBS += -lopenmaxil -lGLESv2 -lEGL -lbcm_host -lvcos -lrt -lv4l2 -lQt5Core -lQt5Gui -lQt5OpenGL -lQt5Quick -lQt5Widgets
+LIBS += -lopenmaxil -lGLESv2 -lEGL -lbcm_host -lvcos -lrt -lv4l2 -lQt5Core -lQt5Gui -lQt5OpenGL -lQt5Quick -lQt5Widgets -lQt5Qml
 LIBS += -lavformat -lavcodec -lavutil
 # Internal
 # NOTE: I had issues with versions compiled from recent sources.
