@@ -25,6 +25,7 @@ INCLUDEPATH += \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtWidgets \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtQuick \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5 \
+   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vcos/pthreads \
    /usr/include/qt5 \
    omx_wrapper \
    ilclient \
