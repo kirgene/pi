@@ -4,7 +4,9 @@
 # Date:    12.03.2012
 #
 
-QT += core core-private gui gui-private opengl quick quick-private
+#QT += core core-private gui gui-private opengl quick quick-private
+
+QT = 
 
 TARGET   = PiOmxTextures
 TEMPLATE = app
