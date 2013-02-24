@@ -22,6 +22,7 @@ LIBS += -lfreetype -lWFC -lpcre
 
 INCLUDEPATH += \
    /usr/include/qt5/QtWidgets \
+   /usr/include/qt5 \
    omx_wrapper \
    ilclient \
    3rdparty/include
