@@ -20,13 +20,16 @@ LIBS += -lavformat -lavcodec -lavutil
 # For omxplayer.
 LIBS += -lfreetype -lWFC -lpcre
 
+ROOT=/home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi
+
 INCLUDEPATH += \
    /usr/include/qt5/QtWidgets \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtWidgets \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtQuick \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5 \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vcos/pthreads \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vmcs_host/linux \
+   ${ROOT}/usr/include/qt5/QtWidgets \
+   ${ROOT}/usr/include/qt5/QtQuick \
+   ${ROOT}/usr/include/qt5 \
+   ${ROOT}/usr/include/interface/vcos/pthreads \
+   ${ROOT}/usr/include/interface/vmcs_host/linux \
+   ${ROOT}/usr/include/qt5/QtCore \
    /usr/include/qt5 \
    omx_wrapper \
    ilclient \
