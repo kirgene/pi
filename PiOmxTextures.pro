@@ -4,9 +4,7 @@
 # Date:    12.03.2012
 #
 
-#QT += core core-private gui gui-private opengl quick quick-private
-
-QT = 
+QT += core core-private gui gui-private opengl quick quick-private
 
 TARGET   = PiOmxTextures
 TEMPLATE = app
@@ -20,21 +18,18 @@ LIBS += -lavformat -lavcodec -lavutil
 # For omxplayer.
 LIBS += -lfreetype -lWFC -lpcre
 
+include(/home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/share/qt5/mkspecs/modules/qt_lib_core.pri)                                                 
+include(/home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/share/qt5/mkspecs/modules/qt_lib_gui.pri)                                                  
+include(/home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/share/qt5/mkspecs/modules/qt_lib_quick.pri)                                                
+include(/home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/share/qt5/mkspecs/modules/qt_lib_widgets.pri)                                              
+include(/home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/share/qt5/mkspecs/modules/qt_lib_opengl.pri)                                               
+include(/home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/share/qt5/mkspecs/modules/qt_lib_qml.pri)                                                  
+include(/home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/share/qt5/mkspecs/modules/qt_lib_network.pri)
+
 INCLUDEPATH += \
-   /usr/include/qt5/QtWidgets \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtWidgets \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtCore \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtOpenGL \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtGui \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtQuick \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5 \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtGui/5.0.1/QtGui \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtCore/5.0.1 \
-   /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/qt5/QtCore/5.0.1/QtCore \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/freetype2 \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vcos/pthreads \
    /home/administrator/openembedded-core/pi-build/tmp-eglibc/sysroots/raspberrypi/usr/include/interface/vmcs_host/linux \
-   /usr/include/qt5 \
    omx_wrapper \
    ilclient \
    3rdparty/include
