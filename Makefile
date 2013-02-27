@@ -10,16 +10,16 @@ MAKEFILE      = Makefile
 
 ####### Compiler, tools and options
 
-CC            = gcc
-CXX           = g++
+CC            = arm-oe-linux-gnueabi-gcc  -march=armv6    -mthumb-interwork -mfloat-abi=softfp  --sysroot=$(SYSROOT) -std=gnu99
+CXX           = arm-oe-linux-gnueabi-g++  -march=armv6    -mthumb-interwork -mfloat-abi=softfp  --sysroot=$(SYSROOT)
 DEFINES       = -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -DHAVE_OMXLIB -DSTANDALONE -DVERBOSE -DENABLE_VIDEO_TEST -DENABLE_MEDIA_PROCESSOR -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_QML_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_GUI_LIB -DQT_CORE_LIB
-CFLAGS        = -march=armv6 -mfloat-abi=softfp -pipe -O2 -Wall -W -D_REENTRANT -fPIE $(DEFINES)
-CXXFLAGS      = -fpermissive -fvisibility-inlines-hidden -pipe -std=c++0x -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CMAKE_CONFIG -D__VIDEOCORE4__ -U_FORTIFY_SOURCE -Wall -DUSE_EXTERNAL_FFMPEG -DHAVE_LIBAVCODEC_AVCODEC_H -DHAVE_LIBAVUTIL_OPT_H -DHAVE_LIBAVUTIL_MEM_H -DHAVE_LIBAVUTIL_AVUTIL_H -DHAVE_LIBAVFORMAT_AVFORMAT_H -DHAVE_LIBAVFILTER_AVFILTER_H -DOMX -DOMX_SKIP64BIT -ftree-vectorize -DUSE_EXTERNAL_OMX -DTARGET_RASPBERRY_PI -DUSE_EXTERNAL_LIBBCM_HOST -O2 -Wall -W -D_REENTRANT -fPIE $(DEFINES)
+CFLAGS        = -O2 -pipe -g -feliminate-unused-debug-types -Wall -W -D_REENTRANT -fPIE $(DEFINES)
+CXXFLAGS      = -O2 -pipe -g -feliminate-unused-debug-types -fpermissive -fvisibility-inlines-hidden -std=c++0x -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CMAKE_CONFIG -D__VIDEOCORE4__ -U_FORTIFY_SOURCE -Wall -DUSE_EXTERNAL_FFMPEG -DHAVE_LIBAVCODEC_AVCODEC_H -DHAVE_LIBAVUTIL_OPT_H -DHAVE_LIBAVUTIL_MEM_H -DHAVE_LIBAVUTIL_AVUTIL_H -DHAVE_LIBAVFORMAT_AVFORMAT_H -DHAVE_LIBAVFILTER_AVFILTER_H -DOMX -DOMX_SKIP64BIT -ftree-vectorize -DUSE_EXTERNAL_OMX -DTARGET_RASPBERRY_PI -DUSE_EXTERNAL_LIBBCM_HOST -O2 -Wall -W -D_REENTRANT -fPIE $(DEFINES)
 INCPATH       = -I$(ROOT)/include -I$(ROOT)/include/freetype2 -I$(ROOT)/include/interface/vcos/pthreads -I$(ROOT)/include/interface/vmcs_host/linux -I$(ROOT)/share/qt5/mkspecs/linux-gnueabi-oe-g++ -I. -Iomx_wrapper -Iilclient -I3rdparty/include -Iomxplayer_lib -Iomxplayer_lib/utils -Iomxplayer_lib/linux -I$(ROOT)/include/qt5 -I$(ROOT)/include/qt5/QtQuick -I$(ROOT)/include/qt5/QtQuick/5.0.1 -I$(ROOT)/include/qt5/QtQuick/5.0.1/QtQuick -I$(ROOT)/include/qt5/QtOpenGL -I$(ROOT)/include/qt5/QtQml -I$(ROOT)/include/qt5/QtWidgets -I$(ROOT)/include/qt5/QtNetwork -I$(ROOT)/include/qt5/QtGui -I$(ROOT)/include/qt5/QtGui/5.0.1 -I$(ROOT)/include/qt5/QtGui/5.0.1/QtGui -I$(ROOT)/include/qt5/QtCore -I$(ROOT)/include/qt5/QtCore/5.0.1 -I$(ROOT)/include/qt5/QtCore/5.0.1/QtCore -I.
-LINK          = g++
+LINK          = arm-oe-linux-gnueabi-g++  -march=armv6    -mthumb-interwork -mfloat-abi=softfp  --sysroot=$(SYSROOT)
 LFLAGS        = -march=armv6 -mfloat-abi=softfp -Wl,-O1 -Wl,-rpath,$(ROOT) -Wl,-rpath,$(ROOT)/lib -L3rdparty/lib
 LIBS          = $(SUBLIBS) -L/usr/X11R6/lib64 -lopenmaxil -lGLESv2 -lEGL -lbcm_host -lvcos -lrt -lv4l2 -lavformat -lavcodec -lavutil -lfreetype -lWFC -lpcre -L$(ROOT)/lib -lQt5Quick -lQt5OpenGL -lQt5Qml -lQt5Widgets -lQt5Network -lQt5Gui -lQt5Core -lGL -lpthread 
-AR            = ar cqs
+AR            = arm-oe-linux-gnueabi-ar
 RANLIB        = 
 TAR           = tar -cf
 COMPRESS      = gzip -9f
