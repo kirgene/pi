@@ -10,8 +10,8 @@ MAKEFILE      = Makefile
 
 ####### Compiler, tools and options
 
-CC            = arm-oe-linux-gnueabi-gcc  -march=armv6    -mthumb-interwork -mfloat-abi=softfp  --sysroot=$(SYSROOT) -std=gnu99
-CXX           = arm-oe-linux-gnueabi-g++  -march=armv6    -mthumb-interwork -mfloat-abi=softfp  --sysroot=$(SYSROOT)
+CC            = arm-oe-linux-gnueabi-gcc  -march=armv6    -mthumb-interwork -mfpu=vfp -mfloat-abi=hard  --sysroot=$(SYSROOT) -std=gnu99
+CXX           = arm-oe-linux-gnueabi-g++  -march=armv6    -mthumb-interwork -mfpu=vfp -mfloat-abi=hard  --sysroot=$(SYSROOT)
 DEFINES       = -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -DHAVE_OMXLIB -DSTANDALONE -DVERBOSE -DENABLE_VIDEO_TEST -DENABLE_MEDIA_PROCESSOR -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_QML_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -O2 -pipe -g -feliminate-unused-debug-types -Wall -W -D_REENTRANT -fPIE $(DEFINES)
 CXXFLAGS      = -O2 -pipe -g -feliminate-unused-debug-types -fpermissive -fvisibility-inlines-hidden -std=c++0x -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CMAKE_CONFIG -D__VIDEOCORE4__ -U_FORTIFY_SOURCE -Wall -DUSE_EXTERNAL_FFMPEG -DHAVE_LIBAVCODEC_AVCODEC_H -DHAVE_LIBAVUTIL_OPT_H -DHAVE_LIBAVUTIL_MEM_H -DHAVE_LIBAVUTIL_AVUTIL_H -DHAVE_LIBAVFORMAT_AVFORMAT_H -DHAVE_LIBAVFILTER_AVFILTER_H -DOMX -DOMX_SKIP64BIT -ftree-vectorize -DUSE_EXTERNAL_OMX -DTARGET_RASPBERRY_PI -DUSE_EXTERNAL_LIBBCM_HOST -O2 -Wall -W -D_REENTRANT -fPIE $(DEFINES)
